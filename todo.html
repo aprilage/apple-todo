@@ -3,11 +3,27 @@
   <head>
     <meta charset="utf-8">
     <title>Apple's Todo</title>
+    <link rel="stylesheet" type="text/css" href="todo.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   </head>
   <body>
-    <h1>New List</h1>
-    <i class="fa fa-plus-square-o" style="font-size:24px"></i>
+      <h1>
+        <span>
+          <input type="text" id="listTitle" placeholder="New List">
+        </span>
+        <span>
+          <button id="addItemButton"><i class="fa fa-plus-square-o" style="font-size:24px"></i></button>
+        </span>
+      </h1>
 
+    <container class="listContainer">
+      <ul>
+        <li>bread</li>
+        <li>milk</li>
+        <li>eggs</li>
+        <li></li>
+        <li></li>
+      </ul>
+    </container>
   </body>
 </html>
