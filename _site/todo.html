@@ -2,9 +2,11 @@
 <html>
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Apple's Todo</title>
     <link rel="stylesheet" type="text/css" href="todo.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="./js/main.js" charset="utf-8"></script>
   </head>
   <body>
       <h1>
@@ -12,18 +14,22 @@
           <input type="text" id="listTitle" placeholder="New List">
         </span>
         <span>
-          <button id="addItemButton"><i class="fa fa-plus-square-o" style="font-size:24px"></i></button>
+          <button data-js="addItemButton" id="addItemButton"><i class="fa fa-plus-square-o" style="font-size:24px"></i></button>
         </span>
       </h1>
 
     <container class="listContainer">
       <ul>
-        <li>bread</li>
-        <li>milk</li>
-        <li>eggs</li>
-        <li></li>
-        <li></li>
+        <li data-js="listItem">bread</li>
+        <li data-js="listItem">milk</li>
+        <li data-js="listItem">eggs</li>
+        <li data-js="listItem"></li>
       </ul>
+
+      <h3>
+        Number of Items Completed: <span data-js="completedCount">0</span>
+      </h3>
+
     </container>
   </body>
 </html>
