@@ -28,21 +28,22 @@ h1 {
   float: right;
 }
 
-.listContainer {
+.list {
   color: #555;
   font-size: 15px;
   padding: 0 !important;
-  width: 550px;
+  max-width: 100%;
   font-family: Arial, monospace;
 }
 
-.listContainer li {
+.listItem {
+  list-style: none;
   border-bottom: 1px dotted #ccc;
   padding-top: 15px;
   padding-bottom: 0px;
   height: 24px;
 }
 
-.listItem--clicked {
-  list-style:circle;
+.checkbox {
+  
 }

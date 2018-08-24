@@ -1,39 +1,39 @@
 document.addEventListener('DOMContentLoaded', () => {
-const listItemElements = document.querySelectorAll("[data-js='listItem']");
-const completedCountElement = document.querySelector("[data-js='completedCount']");
-// Loop over each of the menuItemElements
-listItemElements.forEach((listItemElement) => {
-  // Listen for click/tap whatever
-  listItemElement.addEventListener('click', (e) => {
-       listItemElement.classList.toggle('listItem--clicked');
-       const listItemsThatHaveBeenClicked = document.querySelectorAll('.listItem--clicked');
-       completedCountElement.innerHTML = listItemsThatHaveBeenClicked.length;
-         });
-       });
+  const listData = [
 
-const listData = [
-  {
-    itemTitle: 'bread',
-  },
-  {
-    itemTitle: 'milk',
-  },
-  {
-    itemTitle: 'eggs',
-  }
-];
+    {
+      listItem: 'bread',
+      completed: true,
+    },
+    {
+      listItem: 'milk',
+      completed: true,
+    },
+    {
+      listItem: 'eggs',
+      completed: true,
+    },
+    {
+      listItem: 'cocount oil',
+      completed: true,
+    },
+  ];
 
-const listElement = document.querySelector("[data-js='listItem']");
+const listElement = document.querySelector("[data-js='listItems']");
 
-listData.forEach((listItem, i) => {
-  const readableIterator = i+1;
-  let listItemTemplate = `
-  <li class="listItem${readableIterator}">
-    ${listData.itemTitle}
-  </li>
+listData.forEach((listItem) => {
+  let listTemplate = `
+    <div class="list">
+      <ul>
+          <li class="listItem">
+            <input type="checkbox" class="checkbox">
+              ${listData.listItem}
+          </li>
+      </ul>
+    </div>
   `;
 
-listElement.insertAdjacentHTML('afterbegin', listItemTemplate);
-});
+    listElement.insertAdjacentHTML('beforeend', listTemplate);
+  });
 
 });
