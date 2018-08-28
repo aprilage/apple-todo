@@ -1,33 +1,20 @@
 document.addEventListener('DOMContentLoaded', () => {
-  const listData = [
 
-    {
-      listItem: 'bread',
-      completed: true,
-    },
-    {
-      listItem: 'milk',
-      completed: true,
-    },
-    {
-      listItem: 'eggs',
-      completed: true,
-    },
-    {
-      listItem: 'cocount oil',
-      completed: true,
-    },
-  ];
+
+var listData = [
+];
+inputs.push(document.getElementById("newItem").value);
 
 const listElement = document.querySelector("[data-js='listItems']");
 
-listData.forEach((listItem) => {
+listData.forEach((item) => {
   let listTemplate = `
     <div class="list">
-      <ul>
           <li class="listItem">
             <input type="checkbox" class="checkbox">
-              ${listData.listItem}
+              ${item.listItem}
+            <input id="newItem" type="text">
+            <button>Add</button>
           </li>
       </ul>
     </div>
